@@ -74,7 +74,7 @@ section {
 .hero {
   background:
     linear-gradient(rgba(94,167,94,0.7), rgba(94,167,94,0.7)),
-    url('images/zwerge.jpeg');
+    url('zwerge.jpeg');
 
   background-size: cover;
   background-position: center;
