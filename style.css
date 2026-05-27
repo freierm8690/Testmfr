@@ -1,23 +1,41 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  background: #ff0000;
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  display: flex;
+  font-family: Arial, sans-serif;
+  background: #f7f9f6;
+  color: #333;
+}
+
+/* Sidebar */
 .sidebar {
-  width: 250px;
+  width: 260px;
   height: 100vh;
-  background: #ff0000;
-  padding: 30px;
+  background: linear-gradient(180deg, #7bc67b, #5ea75e);
   color: white;
+  padding: 40px 20px;
   position: fixed;
+  left: 0;
+  top: 0;
 }
 
 .sidebar h1 {
   margin-bottom: 40px;
+  font-size: 28px;
 }
 
+/* Navigation */
 .sidebar nav {
   display: flex;
   flex-direction: column;
@@ -27,26 +45,89 @@ body {
   color: white;
   text-decoration: none;
   margin: 10px 0;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
 .sidebar nav a:hover {
   background: rgba(255,255,255,0.2);
+  transform: translateX(5px);
 }
 
+/* Main Content */
 .content {
-  margin-left: 290px;
-  padding: 40px;
-}  cursor: pointer;
-  transition: 0.3s;
+  margin-left: 260px;
+  width: calc(100% - 260px);
 }
 
-button:hover {
-  transform: scale(1.05);
+/* Sections */
+section {
+  min-height: 100vh;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#message {
-  margin-top: 20px;
-  font-weight: bold;
+/* Hero */
+.hero {
+  background:
+    linear-gradient(rgba(94,167,94,0.7), rgba(94,167,94,0.7)),
+    url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1400&auto=format&fit=crop');
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 54px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 22px;
+}
+
+/* Other Sections */
+section:not(.hero) {
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+section h2 {
+  font-size: 42px;
+  margin-bottom: 25px;
+  color: #5ea75e;
+}
+
+section p {
+  max-width: 700px;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  section {
+    min-height: auto;
+    padding: 60px 30px;
+  }
 }
