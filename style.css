@@ -1,24 +1,33 @@
-/* Smooth Scrolling */
+/* =========================================
+   Smooth Scrolling
+========================================= */
 html {
   scroll-behavior: smooth;
 }
 
-/* Reset */
+/* =========================================
+   Reset
+========================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* =========================================
+   Body
+========================================= */
 body {
   display: flex;
   font-family: Arial, sans-serif;
   background: #f7f9f6;
   color: #333;
+  overflow-x: hidden;
 }
 
-/* Sidebar */
+/* =========================================
+   Sidebar Desktop
+========================================= */
 .sidebar {
   width: 260px;
   height: 100vh;
@@ -28,26 +37,34 @@ body {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar h1 {
   margin-bottom: 40px;
   font-size: 28px;
+  line-height: 1.2;
 }
 
-/* Navigation */
+/* =========================================
+   Navigation
+========================================= */
 .sidebar nav {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .sidebar nav a {
   color: white;
   text-decoration: none;
-  margin: 10px 0;
   padding: 12px 15px;
   border-radius: 10px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  font-size: 16px;
 }
 
 .sidebar nav a:hover {
@@ -55,13 +72,17 @@ body {
   transform: translateX(5px);
 }
 
-/* Main Content */
+/* =========================================
+   Main Content
+========================================= */
 .content {
   margin-left: 260px;
   width: calc(100% - 260px);
 }
 
-/* Sections */
+/* =========================================
+   Sections
+========================================= */
 section {
   min-height: 100vh;
   padding: 80px;
@@ -70,27 +91,37 @@ section {
   justify-content: center;
 }
 
-/* Hero */
+/* =========================================
+   Hero Section
+========================================= */
 .hero {
   background:
-    linear-gradient(rgba(94,167,94,0.7), rgba(94,167,94,0.7)),
+    linear-gradient(rgba(94,167,94,0.65), rgba(94,167,94,0.65)),
     url('zwerge.jpeg');
 
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+
   color: white;
 }
 
 .hero h2 {
   font-size: 54px;
   margin-bottom: 20px;
+  max-width: 700px;
+  line-height: 1.1;
 }
 
 .hero p {
   font-size: 22px;
+  max-width: 650px;
+  line-height: 1.6;
 }
 
-/* Other Sections */
+/* =========================================
+   Standard Sections
+========================================= */
 section:not(.hero) {
   background: white;
   border-bottom: 1px solid #eee;
@@ -100,6 +131,7 @@ section h2 {
   font-size: 42px;
   margin-bottom: 25px;
   color: #5ea75e;
+  line-height: 1.2;
 }
 
 section p {
@@ -108,26 +140,165 @@ section p {
   font-size: 18px;
 }
 
-/* Mobile */
-@media (max-width: 900px) {
+/* =========================================
+   Tablet
+========================================= */
+@media (max-width: 1100px) {
+
+  .sidebar {
+    width: 220px;
+    padding: 30px 15px;
+  }
+
+  .content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+
+  section {
+    padding: 60px;
+  }
+
+  .hero h2 {
+    font-size: 42px;
+  }
+
+  section h2 {
+    font-size: 34px;
+  }
+}
+
+/* =========================================
+   Smartphone Optimierung
+========================================= */
+@media (max-width: 768px) {
 
   body {
     flex-direction: column;
   }
 
+  /* Mobile Navigation oben fixieren */
   .sidebar {
     width: 100%;
     height: auto;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
 
+  .sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  /* Horizontales Scroll-Menü */
+  .sidebar nav {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    gap: 10px;
+
+    padding-bottom: 5px;
+
+    scrollbar-width: none;
+  }
+
+  .sidebar nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sidebar nav a {
+    flex: 0 0 auto;
+    font-size: 14px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 999px;
+  }
+
+  .sidebar nav a:hover {
+    transform: none;
+  }
+
+  /* Content */
   .content {
     margin-left: 0;
     width: 100%;
+    margin-top: 150px;
+  }
+
+  /* Sections */
+  section {
+    min-height: auto;
+    padding: 60px 25px;
+  }
+
+  .hero {
+    min-height: 85vh;
+  }
+
+  .hero h2 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  section h2 {
+    font-size: 30px;
+  }
+
+  section p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================
+   Kleine Smartphones
+========================================= */
+@media (max-width: 480px) {
+
+  .sidebar {
+    padding: 12px;
+  }
+
+  .sidebar h1 {
+    font-size: 20px;
+  }
+
+  .sidebar nav a {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .content {
+    margin-top: 135px;
   }
 
   section {
-    min-height: auto;
-    padding: 60px 30px;
+    padding: 50px 20px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  section h2 {
+    font-size: 26px;
+  }
+
+  section p {
+    font-size: 15px;
   }
 }
