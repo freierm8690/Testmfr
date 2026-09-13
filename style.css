@@ -132,6 +132,11 @@ section h2 {
   margin-bottom: 25px;
   color: #5ea75e;
   line-height: 1.2;
+   text-shadow: 
+    -1px -1px 0 #fff,  
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff;
 }
 
 section p {
