@@ -1,85 +1,370 @@
+```html
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
+  <!-- Zeichencodierung für Umlaute wie ä, ö, ü und ß -->
   <meta charset="UTF-8">
+
+  <!-- Sorgt dafür, dass die Website auch auf Smartphones korrekt dargestellt wird -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Titel der Website, der im Browser-Tab angezeigt wird -->
   <title>Kita Wichtelhausen</title>
 
+  <!-- Verknüpfung mit der externen CSS-Datei -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Sidebar -->
+  <!-- =========================================================
+       SIDEBAR / SEITENNAVIGATION
+       ========================================================= -->
+
   <aside class="sidebar">
 
+    <!-- Name der Kindertagesstätte -->
     <h1>Kita Wichtelhausen</h1>
 
+    <!-- Navigation zu den einzelnen Bereichen der Website -->
     <nav>
       <a href="#start">Startseite</a>
       <a href="#team">Team</a>
       <a href="#veranstaltungen">Veranstaltungen</a>
       <a href="#einrichtung">Einrichtung</a>
       <a href="#konzeption">Konzeption</a>
+
+      <!--
+        Der Link springt direkt zum Impressum.
+        Dafür muss das Impressum die ID "impressum" besitzen.
+      -->
       <a href="#impressum">Impressum</a>
     </nav>
 
   </aside>
 
-  <!-- Main Content -->
+
+  <!-- =========================================================
+       HAUPTINHALT DER WEBSITE
+       ========================================================= -->
+
   <main class="content">
 
+    <!-- =======================================================
+         STARTSEITE
+         ======================================================= -->
+
     <section id="start" class="hero">
+
       <h2>Willkommen in der Kita Wichtelhausen</h2>
-      
+
       <p>
         Ein Ort zum Lernen, Spielen und Wohlfühlen.
       </p>
+
     </section>
 
+
+    <!-- =======================================================
+         TEAM
+         ======================================================= -->
+
     <section id="team">
+
       <h2>Unser Team</h2>
 
       <p>
         Unser pädagogisches Team begleitet die Kinder mit Herz und Erfahrung.
       </p>
+
     </section>
 
+
+    <!-- =======================================================
+         VERANSTALTUNGEN
+         ======================================================= -->
+
     <section id="veranstaltungen">
+
       <h2>Veranstaltungen</h2>
 
       <p>
         Sommerfest, Laternenumzug, Elternnachmittage und viele weitere Aktionen.
       </p>
+
     </section>
 
+
+    <!-- =======================================================
+         EINRICHTUNG
+         ======================================================= -->
+
     <section id="einrichtung">
+
       <h2>Unsere Einrichtung</h2>
 
       <p>
         Moderne Räume, große Spielflächen und ein naturnaher Außenbereich.
       </p>
+
     </section>
 
+
+    <!-- =======================================================
+         KONZEPTION
+         ======================================================= -->
+
     <section id="konzeption">
+
       <h2>Konzeption</h2>
 
       <p>
         Spielerisches Lernen, individuelle Förderung und gemeinsames Entdecken.
       </p>
+
     </section>
 
+
+    <!-- =======================================================
+         IMPRESSUM
+         ======================================================= -->
+
+    <!--
+      Dieser Bereich enthält das vollständige Impressum
+      aus der bereitgestellten Datei.
+      
+      Die ID "impressum" wird von dem Navigationslink
+      in der Sidebar verwendet.
+    -->
     <section id="impressum">
+
+      <!-- Überschrift des Impressums -->
       <h2>Impressum</h2>
 
+
+      <!-- =====================================================
+           ANGABEN ZUM BETREIBER
+           ===================================================== -->
+
       <p>
-        Kita Wichtelhausen<br>
-        Musterstraße 12<br>
-        12345 Musterstadt
+        <strong>Kita Zwergenland e.V.</strong><br>
+        Heegermühler Straße 59<br>
+        16225 Eberswalde
       </p>
+
+
+      <!-- Vereinsregister und Registergericht -->
+      <p>
+        Vereinsregister: HRB 999999<br>
+        Registergericht: Amtsgericht Musterstadt
+      </p>
+
+
+      <!-- =====================================================
+           VERTRETUNGSBERECHTIGTE PERSONEN
+           ===================================================== -->
+
+      <p>
+        <strong>Vertreten durch:</strong><br>
+        Kathrin Döbler<br>
+        Yvonne Zacharias<br>
+        Vivien Bernadett Beerbaum
+      </p>
+
+
+      <!-- =====================================================
+           KONTAKT
+           ===================================================== -->
+
+      <h3>Kontakt</h3>
+
+      <p>
+        Telefon: 03334 288 688<br>
+
+        <!--
+          mailto: öffnet beim Anklicken das
+          standardmäßige E-Mail-Programm des Besuchers.
+        -->
+        E-Mail:
+        <a href="mailto:zwergenlandev@gmx.de">
+          zwergenlandev@gmx.de
+        </a>
+      </p>
+
+
+      <!-- =====================================================
+           UMSATZSTEUER-ID
+           ===================================================== -->
+
+      <h3>Umsatzsteuer-ID</h3>
+
+      <p>
+        Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
+        DE999999999
+      </p>
+
+
+      <!-- =====================================================
+           AUFSICHTSBEHÖRDE
+           ===================================================== -->
+
+      <h3>Aufsichtsbehörde</h3>
+
+      <p>
+        Ministerium für Bildung, Jugend und Sport (MBJS)
+        des Landes Brandenburg<br>
+        Heinrich-Mann-Allee 107<br>
+        14473 Potsdam<br>
+        (Haus 1 / 1a)
+      </p>
+
+      <!--
+        Externer Link zur Website des
+        Ministeriums für Bildung, Jugend und Sport.
+        
+        target="_blank" öffnet die Seite in einem neuen Tab.
+        rel="noopener noreferrer" ist eine Sicherheitsmaßnahme
+        bei externen Links.
+      -->
+      <p>
+        <a
+          href="https://mbjs.brandenburg.de/bildung.html"
+          target="_blank"
+          rel="noopener noreferrer">
+          Website des MBJS
+        </a>
+      </p>
+
+
+      <!-- =====================================================
+           BERUFSBEZEICHNUNG UND BERUFSRECHTLICHE REGELUNGEN
+           ===================================================== -->
+
+      <h3>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
+
+      <p>
+        <strong>Berufsbezeichnung:</strong><br>
+        staatlich anerkannte/r Erzieher/in
+      </p>
+
+      <p>
+        <strong>Verliehen in:</strong><br>
+        Deutschland
+      </p>
+
+      <p>
+        Es gelten folgende berufsrechtliche Regelungen:
+      </p>
+
+      <p>
+        berufsrechtliche Regelung für Erzieherinnen und Erzieher
+        im Land Brandenburg
+      </p>
+
+      <p>
+        einsehbar unter:
+        <a
+          href="https://bravors.brandenburg.de/gesetze/bbgsozberg"
+          target="_blank"
+          rel="noopener noreferrer">
+          bravors.brandenburg.de
+        </a>
+      </p>
+
+
+      <!-- =====================================================
+           BERUFSHAFTPFLICHTVERSICHERUNG
+           ===================================================== -->
+
+      <h3>Angaben zur Berufshaftpflichtversicherung</h3>
+
+      <p>
+        <strong>Name und Sitz des Versicherers:</strong><br>
+        Beispiel Versicherung AG<br>
+        Musterweg 10<br>
+        90210 Musterstadt
+      </p>
+
+      <p>
+        <strong>Geltungsraum der Versicherung:</strong><br>
+        Deutschland
+      </p>
+
+
+      <!-- =====================================================
+           REDAKTIONELL VERANTWORTLICH
+           ===================================================== -->
+
+      <h3>Redaktionell verantwortlich</h3>
+
+      <p>
+        Matthias Freier<br>
+        Choriner Dorfstraße 41<br>
+        16230 Chorin
+      </p>
+
+
+      <!-- =====================================================
+           VERBRAUCHERSTREITBEILEGUNG
+           ===================================================== -->
+
+      <h3>
+        Verbraucherstreitbeilegung/Universalschlichtungsstelle
+      </h3>
+
+      <p>
+        Wir sind nicht bereit oder verpflichtet, an
+        Streitbeilegungsverfahren vor einer
+        Verbraucherschlichtungsstelle teilzunehmen.
+      </p>
+
+
+      <!-- =====================================================
+           DIGITAL SERVICES ACT (DSA)
+           ===================================================== -->
+
+      <h3>
+        Zentrale Kontaktstelle nach dem Digital Services Act - DSA
+        (Verordnung (EU) 2022/2065)
+      </h3>
+
+      <p>
+        Unsere zentrale Kontaktstelle für Nutzer und Behörden
+        nach Art. 11, 12 DSA erreichen Sie wie folgt:
+      </p>
+
+      <p>
+        E-Mail:
+        <a href="mailto:matthias.freier90@gmail.com">
+          matthias.freier90@gmail.com
+        </a>
+      </p>
+
+      <p>
+        Die für den Kontakt zur Verfügung stehenden Sprachen sind:
+        Deutsch, Englisch.
+      </p>
+
+
+      <!-- =====================================================
+           QUELLENANGABE
+           ===================================================== -->
+
+      <p>
+        Quelle:
+        <a
+          href="https://www.e-recht24.de"
+          target="_blank"
+          rel="noopener noreferrer">
+          e-recht24.de
+        </a>
+      </p>
+
     </section>
 
   </main>
 
 </body>
 </html>
+```
