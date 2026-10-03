@@ -20,7 +20,7 @@ html {
 body {
   display: flex;
   font-family: Arial, sans-serif;
-  background: #f7f9f6;
+  background: #EAF4E5;
   color: #333;
   overflow-x: hidden;
 }
@@ -123,7 +123,7 @@ section {
    Standard Sections
 ========================================= */
 section:not(.hero) {
-  background: #c8e6c9;
+  background: #EAF4E5;
   border-bottom: 1px solid #a5d6a7;
 }
 
