@@ -123,8 +123,8 @@ section {
    Standard Sections
 ========================================= */
 section:not(.hero) {
-  background: white;
-  border-bottom: 1px solid #eee;
+  background: #c8e6c9;
+  border-bottom: 1px solid #a5d6a7;
 }
 
 section h2 {
