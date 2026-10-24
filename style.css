@@ -1,309 +1,1341 @@
 /* =========================================
    Smooth Scrolling
 ========================================= */
+
 html {
   scroll-behavior: smooth;
 }
 
+
 /* =========================================
    Reset
 ========================================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
 /* =========================================
    Body
 ========================================= */
+
 body {
   display: flex;
-  font-family: Arial, sans-serif;
+
+  font-family: Arial, Helvetica, sans-serif;
+
   background: #EAF4E5;
   color: #333;
+
   overflow-x: hidden;
 }
+
 
 /* =========================================
    Sidebar Desktop
 ========================================= */
+
 .sidebar {
   width: 260px;
   height: 100vh;
-  background: linear-gradient(180deg, #7bc67b, #5ea75e);
+
+  background: linear-gradient(
+    180deg,
+    #7bc67b,
+    #5ea75e
+  );
+
   color: white;
+
   padding: 40px 20px;
+
   position: fixed;
   left: 0;
   top: 0;
+
   z-index: 1000;
 
   display: flex;
   flex-direction: column;
 }
 
+
 .sidebar h1 {
   margin-bottom: 40px;
+
   font-size: 28px;
   line-height: 1.2;
 }
 
+
 /* =========================================
    Navigation
 ========================================= */
+
 .sidebar nav {
   display: flex;
   flex-direction: column;
+
   gap: 10px;
 }
 
+
 .sidebar nav a {
   color: white;
+
   text-decoration: none;
+
   padding: 12px 15px;
+
   border-radius: 10px;
-  transition: all 0.3s ease;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+
   font-size: 16px;
 }
 
+
 .sidebar nav a:hover {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
+
   transform: translateX(5px);
 }
+
+
+/* Tastaturbedienung */
+
+.sidebar nav a:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
 
 /* =========================================
    Main Content
 ========================================= */
+
 .content {
   margin-left: 260px;
+
   width: calc(100% - 260px);
 }
 
-/* =========================================
-   Sections
-========================================= */
-section {
-  min-height: 100vh;
-  padding: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* =========================================
-   Hero Section
-========================================= */
-.hero {
-  background:
-    linear-gradient(rgba(94,167,94,0.65), rgba(94,167,94,0.65)),
-    url('zwerge.jpeg');
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  color: white;
-}
-
-.hero h2 {
-  font-size: 54px;
-  margin-bottom: 20px;
-  max-width: 700px;
-  line-height: 1.1;
-}
-
-.hero p {
-  font-size: 22px;
-  max-width: 650px;
-  line-height: 1.6;
-}
 
 /* =========================================
    Standard Sections
 ========================================= */
+
 section:not(.hero) {
+  min-height: 100vh;
+
+  padding: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   background: #EAF4E5;
+
   border-bottom: 1px solid #a5d6a7;
 }
 
-section h2 {
-  font-size: 42px;
+
+section:not(.hero) h2 {
   margin-bottom: 25px;
+
   color: #5ea75e;
+
+  font-size: 42px;
   line-height: 1.2;
-   text-shadow: 
-    -1px -1px 0 #fff,  
+
+  text-shadow:
+    -1px -1px 0 #fff,
      1px -1px 0 #fff,
     -1px  1px 0 #fff,
      1px  1px 0 #fff;
 }
 
-section p {
+
+section:not(.hero) p {
   max-width: 700px;
-  line-height: 1.8;
+
   font-size: 18px;
+  line-height: 1.8;
 }
 
+
+/* =========================================================
+   HERO – ZWERGENLAND
+   ========================================================= */
+
+.hero {
+  --hero-green: #267a2e;
+  --hero-dark-green: #176629;
+  --hero-blue: #15528a;
+  --hero-yellow: #f4b51b;
+  --hero-orange: #ef7f22;
+  --hero-light-green: #9bb72a;
+  --hero-cream: #fbfaf1;
+
+  position: relative;
+
+  width: 100%;
+  min-height: 720px;
+
+  overflow: hidden;
+
+  display: block;
+
+  background: #ffffff;
+
+  color: #333;
+}
+
+
 /* =========================================
-   Tablet
+   Hero Hintergrundbild
 ========================================= */
+
+.hero-background {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.94) 27%,
+      rgba(255, 255, 255, 0.65) 42%,
+      rgba(255, 255, 255, 0.15) 58%,
+      rgba(255, 255, 255, 0.00) 70%
+    ),
+    url("zwergenland-hero.webp");
+
+  background-size: cover;
+
+  /*
+     Das wichtige Motiv mit Zwerg und Schild
+     befindet sich rechts.
+  */
+  background-position: center right;
+
+  background-repeat: no-repeat;
+
+  z-index: 0;
+}
+
+
+/* =========================================
+   Hero Hauptinhalt
+========================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 55%;
+  max-width: 720px;
+
+  padding:
+    90px
+    40px
+    200px
+    7%;
+}
+
+
+/* =========================================
+   Sonne
+========================================= */
+
+.hero-sun {
+  position: absolute;
+
+  top: 58px;
+  right: 80px;
+
+  color: var(--hero-yellow);
+
+  font-size: 42px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   "Willkommen im"
+========================================= */
+
+.hero-welcome {
+  margin: 0 0 8px;
+
+  color: var(--hero-blue);
+
+  font-size: clamp(
+    2rem,
+    3vw,
+    3.6rem
+  );
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================================
+   Zwergenland
+========================================= */
+
+.hero-title {
+  margin: 0 0 24px;
+
+  font-size: clamp(
+    3.5rem,
+    6vw,
+    7rem
+  );
+
+  font-weight: 800;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+
+  /*
+     Alte globale h2-Effekte sicher entfernen.
+  */
+  text-shadow: none;
+}
+
+
+/* Buchstabenfarben */
+
+.hero-z,
+.hero-g,
+.hero-n2 {
+  color: #267a2e;
+}
+
+
+.hero-w,
+.hero-n,
+.hero-l,
+.hero-d {
+  color: #3c93c8;
+}
+
+
+.hero-e,
+.hero-a {
+  color: #9bb72a;
+}
+
+
+.hero-r {
+  color: #f2b51c;
+}
+
+
+.hero-e2 {
+  color: #ef7f22;
+}
+
+
+/* =========================================
+   Claim
+========================================= */
+
+.hero-claim {
+  margin: 0 0 24px;
+
+  max-width: 600px;
+
+  color: var(--hero-blue);
+
+  font-size: clamp(
+    1.6rem,
+    2.3vw,
+    2.7rem
+  );
+
+  font-weight: 600;
+
+  line-height: 1.15;
+}
+
+
+/* =========================================
+   Beschreibung
+========================================= */
+
+.hero-description {
+  margin: 0 0 30px;
+
+  max-width: 600px;
+
+  color: #174f80;
+
+  font-size: clamp(
+    1rem,
+    1.25vw,
+    1.25rem
+  );
+
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   Hero Buttons
+========================================= */
+
+.hero-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+}
+
+
+.hero-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 54px;
+
+  padding: 0 28px;
+
+  border: 2px solid var(--hero-green);
+
+  border-radius: 999px;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+.hero-button span {
+  margin-right: 10px;
+
+  font-size: 1.35rem;
+}
+
+
+/* Grüner Button */
+
+.hero-button-primary {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4b9e30,
+      #267a2e
+    );
+}
+
+
+/* Weißer Button */
+
+.hero-button-secondary {
+  color: var(--hero-green);
+
+  background:
+    rgba(255, 255, 255, 0.94);
+}
+
+
+/* Hover */
+
+.hero-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px
+    rgba(38, 122, 46, 0.22);
+}
+
+
+/* Tastatur */
+
+.hero-button:focus-visible {
+  outline: 3px solid var(--hero-yellow);
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================
+   Hero Merkmalsleiste
+========================================= */
+
+.hero-features {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 3;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  padding:
+    30px
+    4%
+    28px;
+
+  background:
+    rgba(
+      253,
+      252,
+      244,
+      0.97
+    );
+
+  border-radius:
+    50% 50% 0 0 /
+    20px 20px 0 0;
+
+  box-shadow:
+    0 -5px 20px
+    rgba(0, 0, 0, 0.04);
+}
+
+
+/* Einzelnes Merkmal */
+
+.hero-feature {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100px;
+
+  padding: 0 20px;
+
+  color: var(--hero-dark-green);
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  text-align: center;
+
+  border-right:
+    1px solid
+    rgba(38, 122, 46, 0.22);
+}
+
+
+.hero-feature:last-child {
+  border-right: 0;
+}
+
+
+/* Icons */
+
+.hero-feature-icon {
+  min-height: 40px;
+
+  margin-bottom: 8px;
+
+  font-size: 2rem;
+
+  line-height: 1;
+}
+
+
+.hero-heart {
+  font-size: 2.7rem;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
 @media (max-width: 1100px) {
+
+  /* -----------------------------------------
+     Sidebar
+  ----------------------------------------- */
 
   .sidebar {
     width: 220px;
-    padding: 30px 15px;
+
+    padding:
+      30px
+      15px;
   }
+
+
+  .sidebar h1 {
+    font-size: 24px;
+  }
+
+
+  .sidebar nav a {
+    font-size: 14px;
+
+    padding:
+      10px
+      12px;
+  }
+
+
+  /* -----------------------------------------
+     Content
+  ----------------------------------------- */
 
   .content {
     margin-left: 220px;
-    width: calc(100% - 220px);
+
+    width:
+      calc(100% - 220px);
   }
 
-  section {
+
+  /* -----------------------------------------
+     Standard Sections
+  ----------------------------------------- */
+
+  section:not(.hero) {
     padding: 60px;
   }
 
-  .hero h2 {
-    font-size: 42px;
-  }
 
-  section h2 {
+  section:not(.hero) h2 {
     font-size: 34px;
   }
+
+
+  /* -----------------------------------------
+     Hero
+  ----------------------------------------- */
+
+  .hero {
+    min-height: 700px;
+  }
+
+
+  .hero-content {
+    width: 62%;
+
+    padding:
+      80px
+      30px
+      190px
+      6%;
+  }
+
+
+  .hero-background {
+    background-position:
+      62% center;
+  }
+
+
+  .hero-sun {
+    right: 40px;
+  }
+
+
+  .hero-title {
+    font-size:
+      clamp(
+        3.2rem,
+        6vw,
+        5.5rem
+      );
+  }
+
+
+  .hero-feature {
+    padding:
+      0
+      12px;
+
+    font-size: 0.9rem;
+  }
+
 }
 
-/* =========================================
-   Smartphone Optimierung
-========================================= */
+
+/* =========================================================
+   SMARTPHONE
+   ========================================================= */
+
 @media (max-width: 768px) {
+
+  /* =========================================
+     Body
+  ========================================= */
 
   body {
     flex-direction: column;
   }
 
-  /* Mobile Navigation oben fixieren */
+
+  /* =========================================
+     Mobile Navigation
+  ========================================= */
+
   .sidebar {
     width: 100%;
+
     height: auto;
+
     position: fixed;
+
     top: 0;
     left: 0;
 
     padding: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    box-shadow:
+      0 2px 10px
+      rgba(0, 0, 0, 0.1);
   }
 
+
   .sidebar h1 {
-    font-size: 24px;
     margin-bottom: 15px;
+
+    font-size: 24px;
+
     text-align: center;
   }
 
+
   /* Horizontales Scroll-Menü */
+
   .sidebar nav {
     flex-direction: row;
+
     overflow-x: auto;
     overflow-y: hidden;
+
     white-space: nowrap;
+
     gap: 10px;
 
     padding-bottom: 5px;
 
     scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
   }
+
 
   .sidebar nav::-webkit-scrollbar {
     display: none;
   }
 
+
   .sidebar nav a {
-    flex: 0 0 auto;
-    font-size: 14px;
-    padding: 10px 14px;
-    background: rgba(255,255,255,0.12);
+    flex:
+      0
+      0
+      auto;
+
+    padding:
+      10px
+      14px;
+
+    background:
+      rgba(
+        255,
+        255,
+        255,
+        0.12
+      );
+
     border-radius: 999px;
+
+    font-size: 14px;
   }
+
 
   .sidebar nav a:hover {
     transform: none;
   }
 
-  /* Content */
+
+  /* =========================================
+     Content
+  ========================================= */
+
   .content {
-    margin-left: 0;
     width: 100%;
+
+    margin-left: 0;
+
+    /*
+       Platz für die feste Navigation.
+    */
     margin-top: 150px;
   }
 
-  /* Sections */
-  section {
+
+  /* =========================================
+     Standard Sections
+  ========================================= */
+
+  section:not(.hero) {
     min-height: auto;
-    padding: 60px 25px;
+
+    padding:
+      60px
+      25px;
   }
 
-  .hero {
-    min-height: 85vh;
-  }
 
-  .hero h2 {
-    font-size: 34px;
-    line-height: 1.2;
-  }
-
-  .hero p {
-    font-size: 18px;
-  }
-
-  section h2 {
+  section:not(.hero) h2 {
     font-size: 30px;
   }
 
-  section p {
+
+  section:not(.hero) p {
     font-size: 16px;
+
     line-height: 1.7;
   }
+
+
+  /* =====================================================
+     MOBILE HERO
+     ===================================================== */
+
+  .hero {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    min-height: 0;
+
+    background: #ffffff;
+
+    overflow: hidden;
+  }
+
+
+  /* -----------------------------------------
+     Smartphone-Bild
+     
+     Hier wird automatisch das eigens
+     zugeschnittene Smartphone-Bild geladen.
+  ----------------------------------------- */
+
+  .hero-background {
+    position: relative;
+
+    order: 1;
+
+    width: 100%;
+
+    height: min(
+      62vh,
+      520px
+    );
+
+    min-height: 330px;
+
+    /*
+       WICHTIG:
+       Smartphone-Version statt Desktopbild
+    */
+    background-image:
+      url(
+        "zwergenland-hero-mobile.webp"
+      );
+
+    background-size: cover;
+
+    background-position:
+      center center;
+
+    background-repeat:
+      no-repeat;
+
+    z-index: 0;
+  }
+
+
+  /* -----------------------------------------
+     Textbereich
+  ----------------------------------------- */
+
+  .hero-content {
+    position: relative;
+
+    order: 2;
+
+    width: 100%;
+
+    max-width: none;
+
+    padding:
+      30px
+      22px
+      34px;
+
+    text-align: center;
+
+    background:
+      linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #fffef8 100%
+      );
+  }
+
+
+  /* Sonne */
+
+  .hero-sun {
+    position: static;
+
+    margin-bottom: 5px;
+
+    color:
+      var(--hero-yellow);
+
+    font-size: 28px;
+  }
+
+
+  /* Willkommen */
+
+  .hero-welcome {
+    margin-bottom: 5px;
+
+    font-size:
+      clamp(
+        1.8rem,
+        8vw,
+        2.6rem
+      );
+  }
+
+
+  /* Zwergenland */
+
+  .hero-title {
+    margin-bottom: 20px;
+
+    font-size:
+      clamp(
+        3rem,
+        14vw,
+        5rem
+      );
+
+    line-height: 0.95;
+
+    letter-spacing:
+      -0.055em;
+  }
+
+
+  /* Claim */
+
+  .hero-claim {
+    margin:
+      0 auto
+      20px;
+
+    font-size:
+      clamp(
+        1.4rem,
+        6.5vw,
+        2rem
+      );
+  }
+
+
+  /* Beschreibung */
+
+  .hero-description {
+    margin:
+      0 auto
+      26px;
+
+    font-size: 1rem;
+
+    line-height: 1.55;
+  }
+
+
+  .hero-description br {
+    display: none;
+  }
+
+
+  /* =========================================
+     Buttons Mobile
+  ========================================= */
+
+  .hero-buttons {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 12px;
+  }
+
+
+  .hero-button {
+    width: 100%;
+
+    min-height: 56px;
+
+    padding:
+      0
+      20px;
+  }
+
+
+  /*
+     Auf Mobilgeräten wird "Kitaplatz anfragen"
+     visuell nach oben gestellt.
+  */
+
+  .hero-button-secondary {
+    order: -1;
+
+    color: #ffffff;
+
+    background:
+      linear-gradient(
+        135deg,
+        #4b9e30,
+        #267a2e
+      );
+  }
+
+
+  .hero-button-primary {
+    color:
+      var(--hero-green);
+
+    background:
+      #ffffff;
+  }
+
+
+  /* =========================================
+     Merkmale Mobile
+  ========================================= */
+
+  .hero-features {
+    position: relative;
+
+    order: 3;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    padding:
+      24px
+      14px
+      28px;
+
+    background:
+      var(--hero-cream);
+
+    border-radius: 0;
+
+    box-shadow: none;
+  }
+
+
+  .hero-feature {
+    min-height: 105px;
+
+    padding:
+      15px
+      8px;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid
+      rgba(
+        38,
+        122,
+        46,
+        0.15
+      );
+  }
+
+
+  /* Trennlinie zwischen Spalten */
+
+  .hero-feature:nth-child(odd) {
+    border-right:
+      1px solid
+      rgba(
+        38,
+        122,
+        46,
+        0.15
+      );
+  }
+
+
+  /* Unterste Reihe ohne Linie */
+
+  .hero-feature:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
 }
 
-/* =========================================
-   Kleine Smartphones
-========================================= */
+
+/* =========================================================
+   KLEINE SMARTPHONES
+   ========================================================= */
+
 @media (max-width: 480px) {
+
+  /* =========================================
+     Navigation
+  ========================================= */
 
   .sidebar {
     padding: 12px;
   }
 
+
   .sidebar h1 {
     font-size: 20px;
   }
 
+
   .sidebar nav a {
+    padding:
+      8px
+      12px;
+
     font-size: 13px;
-    padding: 8px 12px;
   }
+
+
+  /* =========================================
+     Content
+  ========================================= */
 
   .content {
     margin-top: 135px;
   }
 
-  section {
-    padding: 50px 20px;
+
+  /* =========================================
+     Standard Sections
+  ========================================= */
+
+  section:not(.hero) {
+    padding:
+      50px
+      20px;
   }
 
-  .hero h2 {
-    font-size: 28px;
-  }
 
-  .hero p {
-    font-size: 16px;
-  }
-
-  section h2 {
+  section:not(.hero) h2 {
     font-size: 26px;
   }
 
-  section p {
+
+  section:not(.hero) p {
     font-size: 15px;
   }
+
+
+  /* =========================================
+     Hero
+  ========================================= */
+
+  .hero-background {
+    height: 420px;
+
+    min-height: 0;
+
+    /*
+       Etwas weiter rechts fokussieren,
+       damit Zwerg/Schild erhalten bleiben.
+    */
+    background-position:
+      center center;
+  }
+
+
+  .hero-content {
+    padding:
+      26px
+      16px
+      30px;
+  }
+
+
+  .hero-welcome {
+    font-size: 1.8rem;
+  }
+
+
+  .hero-title {
+    font-size:
+      clamp(
+        2.8rem,
+        14vw,
+        4rem
+      );
+  }
+
+
+  .hero-claim {
+    font-size: 1.4rem;
+  }
+
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+
+  .hero-button {
+    font-size: 0.95rem;
+  }
+
+
+  /* Merkmale bleiben 2 x 2.
+     Das ist auf normalen Smartphones
+     kompakter als vier Zeilen. */
+
+  .hero-feature {
+    font-size: 0.88rem;
+  }
+
+
+  .hero-feature-icon {
+    font-size: 1.8rem;
+  }
+
+
+  .hero-heart {
+    font-size: 2.3rem;
+  }
+
+}
+
+
+/* =========================================================
+   SEHR KLEINE SMARTPHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .hero-background {
+    height: 360px;
+  }
+
+
+  .hero-title {
+    font-size: 2.7rem;
+  }
+
+
+  /*
+     Bei extrem schmalen Displays werden
+     die Merkmale untereinander dargestellt.
+  */
+
+  .hero-features {
+    grid-template-columns: 1fr;
+  }
+
+
+  .hero-feature,
+  .hero-feature:nth-child(odd),
+  .hero-feature:nth-last-child(-n + 2) {
+    min-height: 85px;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid
+      rgba(
+        38,
+        122,
+        46,
+        0.15
+      );
+  }
+
+
+  .hero-feature:last-child {
+    border-bottom: 0;
+  }
+
+}
+
+
+/* =========================================================
+   REDUZIERTE BEWEGUNGEN
+   Barrierefreiheit
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+
+  .sidebar nav a,
+  .hero-button {
+    transition: none;
+  }
+
+
+  .hero-button:hover,
+  .sidebar nav a:hover {
+    transform: none;
+  }
+
 }
