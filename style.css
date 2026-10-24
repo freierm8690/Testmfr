@@ -230,6 +230,67 @@ section:not(.hero) p {
   z-index: 0;
 }
 
+/* =========================================
+   Hero Kontaktleiste
+========================================= */
+
+.hero-contact {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 10;
+
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  padding: 10px 30px;
+
+  background: rgba(38, 122, 46, 0.92);
+
+  color: #ffffff;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+
+.hero-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.hero-contact-item:hover {
+  opacity: 0.85;
+
+  transform: translateY(-1px);
+}
+
+
+.hero-contact-item:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 
 /* =========================================
    Hero Hauptinhalt
