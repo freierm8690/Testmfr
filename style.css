@@ -146,7 +146,7 @@ section:not(.hero) {
 
 
 section:not(.hero) h2 {
-  margin-bottom: 25px;
+  margin-bottom: 42px;
 
   color: #5ea75e;
 
@@ -310,6 +310,7 @@ section:not(.hero) p {
   line-height: 0.95;
 
   letter-spacing: -0.055em;
+  white-space: nowrap;
 
   /*
      Alte globale h2-Effekte sicher entfernen.
