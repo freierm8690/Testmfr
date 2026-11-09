@@ -24,12 +24,9 @@ html {
 
 body {
   display: flex;
-
   font-family: Arial, Helvetica, sans-serif;
-
   background: #EAF4E5;
   color: #333;
-
   overflow-x: hidden;
 }
 
@@ -49,13 +46,11 @@ body {
   );
 
   color: white;
-
   padding: 40px 20px;
 
   position: fixed;
   left: 0;
   top: 0;
-
   z-index: 1000;
 
   display: flex;
@@ -65,7 +60,6 @@ body {
 
 .sidebar h1 {
   margin-bottom: 40px;
-
   font-size: 28px;
   line-height: 1.2;
 }
@@ -78,18 +72,14 @@ body {
 .sidebar nav {
   display: flex;
   flex-direction: column;
-
   gap: 10px;
 }
 
 
 .sidebar nav a {
   color: white;
-
   text-decoration: none;
-
   padding: 12px 15px;
-
   border-radius: 10px;
 
   transition:
@@ -102,12 +92,9 @@ body {
 
 .sidebar nav a:hover {
   background: rgba(255, 255, 255, 0.2);
-
   transform: translateX(5px);
 }
 
-
-/* Tastaturbedienung */
 
 .sidebar nav a:focus-visible {
   outline: 3px solid #ffffff;
@@ -121,7 +108,6 @@ body {
 
 .content {
   margin-left: 260px;
-
   width: calc(100% - 260px);
 }
 
@@ -131,10 +117,7 @@ body {
 ========================================= */
 
 section:not(.hero) {
-  /* Kapitel passen sich der tatsächlichen Inhaltslänge an */
   min-height: auto;
-
-  /* Weniger Abstand zwischen den Kapiteln */
   padding: 48px 70px;
 
   display: flex;
@@ -142,16 +125,13 @@ section:not(.hero) {
   justify-content: flex-start;
 
   background: #EAF4E5;
-
   border-bottom: 1px solid #a5d6a7;
 }
 
 
 section:not(.hero) h2 {
   margin-bottom: 24px;
-
   color: #5ea75e;
-
   font-size: 34px;
   line-height: 1.2;
 
@@ -165,7 +145,6 @@ section:not(.hero) h2 {
 
 section:not(.hero) p {
   max-width: 700px;
-
   font-size: 18px;
   line-height: 1.65;
 }
@@ -173,7 +152,7 @@ section:not(.hero) p {
 
 /* =========================================================
    HERO – ZWERGENLAND
-   ========================================================= */
+========================================================= */
 
 .hero {
   --hero-green: #267a2e;
@@ -185,16 +164,11 @@ section:not(.hero) p {
   --hero-cream: #fbfaf1;
 
   position: relative;
-
   width: 100%;
   min-height: 720px;
-
   overflow: hidden;
-
   display: block;
-
   background: #ffffff;
-
   color: #333;
 }
 
@@ -205,7 +179,6 @@ section:not(.hero) p {
 
 .hero-background {
   position: absolute;
-
   inset: 0;
 
   background-image:
@@ -220,29 +193,21 @@ section:not(.hero) p {
     url("zwergenland-hero.webp");
 
   background-size: cover;
-
-  /*
-     Das wichtige Motiv mit Zwerg und Schild
-     befindet sich rechts.
-  */
   background-position: center right;
-
   background-repeat: no-repeat;
-
   z-index: 0;
 }
 
+
 /* =========================================
-   Hero Kontaktleiste
+   Hero Kontaktleiste – Desktop
 ========================================= */
 
 .hero-contact {
   position: absolute;
-
   top: 0;
   left: 0;
   right: 0;
-
   z-index: 10;
 
   min-height: 46px;
@@ -255,7 +220,6 @@ section:not(.hero) p {
   padding: 10px 30px;
 
   background: rgba(38, 122, 46, 0.92);
-
   color: #ffffff;
 
   font-size: 0.9rem;
@@ -272,7 +236,6 @@ section:not(.hero) p {
   gap: 7px;
 
   color: #ffffff;
-
   text-decoration: none;
 
   transition:
@@ -283,7 +246,6 @@ section:not(.hero) p {
 
 .hero-contact-item:hover {
   opacity: 0.85;
-
   transform: translateY(-1px);
 }
 
@@ -294,13 +256,13 @@ section:not(.hero) p {
   border-radius: 4px;
 }
 
+
 /* =========================================
    Hero Hauptinhalt
 ========================================= */
 
 .hero-content {
   position: relative;
-
   z-index: 2;
 
   width: 65%;
@@ -320,25 +282,21 @@ section:not(.hero) p {
 
 .hero-sun {
   position: absolute;
-
   top: 58px;
   right: 80px;
 
   color: var(--hero-yellow);
-
   font-size: 42px;
-
   line-height: 1;
 }
 
 
 /* =========================================
-   "Willkommen im"
+   Willkommen im
 ========================================= */
 
 .hero-welcome {
   margin: 0 0 8px;
-
   color: var(--hero-blue);
 
   font-size: clamp(
@@ -348,9 +306,7 @@ section:not(.hero) p {
   );
 
   font-weight: 700;
-
   line-height: 1;
-
   letter-spacing: -0.03em;
 }
 
@@ -369,17 +325,9 @@ section:not(.hero) p {
   );
 
   white-space: nowrap;
-
   font-weight: 800;
-
   line-height: 0.95;
-
   letter-spacing: -0.055em;
-  
-
-  /*
-     Alte globale h2-Effekte sicher entfernen.
-  */
   text-shadow: none;
 }
 
@@ -423,9 +371,7 @@ section:not(.hero) p {
 
 .hero-claim {
   margin: 0 0 24px;
-
   max-width: 600px;
-
   color: var(--hero-blue);
 
   font-size: clamp(
@@ -435,7 +381,6 @@ section:not(.hero) p {
   );
 
   font-weight: 600;
-
   line-height: 1.15;
 }
 
@@ -446,9 +391,7 @@ section:not(.hero) p {
 
 .hero-description {
   margin: 0 0 30px;
-
   max-width: 600px;
-
   color: #174f80;
 
   font-size: clamp(
@@ -467,31 +410,24 @@ section:not(.hero) p {
 
 .hero-buttons {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 14px;
 }
 
 
 .hero-button {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
   min-height: 54px;
-
   padding: 0 28px;
 
   border: 2px solid var(--hero-green);
-
   border-radius: 999px;
 
   font-size: 1rem;
-
   font-weight: 700;
-
   text-decoration: none;
 
   transition:
@@ -503,7 +439,6 @@ section:not(.hero) p {
 
 .hero-button span {
   margin-right: 10px;
-
   font-size: 1.35rem;
 }
 
@@ -526,13 +461,9 @@ section:not(.hero) p {
 
 .hero-button-secondary {
   color: var(--hero-green);
-
-  background:
-    rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.94);
 }
 
-
-/* Hover */
 
 .hero-button:hover {
   transform: translateY(-2px);
@@ -543,11 +474,8 @@ section:not(.hero) p {
 }
 
 
-/* Tastatur */
-
 .hero-button:focus-visible {
   outline: 3px solid var(--hero-yellow);
-
   outline-offset: 4px;
 }
 
@@ -558,30 +486,20 @@ section:not(.hero) p {
 
 .hero-features {
   position: absolute;
-
   left: 0;
   right: 0;
   bottom: 0;
-
   z-index: 3;
 
   display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
   padding:
     30px
     4%
     28px;
 
-  background:
-    rgba(
-      253,
-      252,
-      244,
-      0.97
-    );
+  background: rgba(253, 252, 244, 0.97);
 
   border-radius:
     50% 50% 0 0 /
@@ -593,33 +511,22 @@ section:not(.hero) p {
 }
 
 
-/* Einzelnes Merkmal */
-
 .hero-feature {
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
 
   min-height: 100px;
-
   padding: 0 20px;
 
   color: var(--hero-dark-green);
-
   font-size: 1rem;
-
   font-weight: 700;
-
   line-height: 1.25;
-
   text-align: center;
 
-  border-right:
-    1px solid
-    rgba(38, 122, 46, 0.22);
+  border-right: 1px solid rgba(38, 122, 46, 0.22);
 }
 
 
@@ -628,15 +535,10 @@ section:not(.hero) p {
 }
 
 
-/* Icons */
-
 .hero-feature-icon {
   min-height: 40px;
-
   margin-bottom: 8px;
-
   font-size: 2rem;
-
   line-height: 1;
 }
 
@@ -648,52 +550,28 @@ section:not(.hero) p {
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 1100px) {
 
-  /* -----------------------------------------
-     Sidebar
-  ----------------------------------------- */
-
   .sidebar {
     width: 220px;
-
-    padding:
-      30px
-      15px;
+    padding: 30px 15px;
   }
-
 
   .sidebar h1 {
     font-size: 24px;
   }
 
-
   .sidebar nav a {
     font-size: 14px;
-
-    padding:
-      10px
-      12px;
+    padding: 10px 12px;
   }
-
-
-  /* -----------------------------------------
-     Content
-  ----------------------------------------- */
 
   .content {
     margin-left: 220px;
-
-    width:
-      calc(100% - 220px);
+    width: calc(100% - 220px);
   }
-
-
-  /* -----------------------------------------
-     Standard Sections
-  ----------------------------------------- */
 
   section:not(.hero) {
     min-height: auto;
@@ -701,58 +579,33 @@ section:not(.hero) p {
     justify-content: flex-start;
   }
 
-
   section:not(.hero) h2 {
     font-size: 34px;
   }
-
-
-  /* -----------------------------------------
-     Hero
-  ----------------------------------------- */
 
   .hero {
     min-height: 700px;
   }
 
-
   .hero-content {
     width: 62%;
-
-    padding:
-      80px
-      30px
-      190px
-      6%;
+    padding: 80px 30px 190px 6%;
   }
-
 
   .hero-background {
-    background-position:
-      62% center;
+    background-position: 62% center;
   }
-
 
   .hero-sun {
     right: 40px;
   }
 
-
   .hero-title {
-    font-size:
-      clamp(
-        3.2rem,
-        6vw,
-        5.5rem
-      );
+    font-size: clamp(3.2rem, 6vw, 5.5rem);
   }
 
-
   .hero-feature {
-    padding:
-      0
-      12px;
-
+    padding: 0 12px;
     font-size: 0.9rem;
   }
 
@@ -761,7 +614,7 @@ section:not(.hero) p {
 
 /* =========================================================
    SMARTPHONE – MODERNER HERO
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 768px) {
 
@@ -815,7 +668,7 @@ section:not(.hero) p {
   .content {
     width: 100%;
     margin-left: 0;
-    margin-top: 150px;
+    margin-top: 118px;
   }
 
   section:not(.hero) {
@@ -833,9 +686,9 @@ section:not(.hero) p {
   }
 
 
-  /* =====================================================
-     MODERNER MOBILE HERO
-     ===================================================== */
+  /* =========================================
+     MOBILE HERO
+  ========================================= */
 
   .hero {
     position: relative;
@@ -854,49 +707,114 @@ section:not(.hero) p {
     left: auto;
     right: auto;
     order: 0;
+
     width: 100%;
     min-height: 42px;
+
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
     justify-content: center;
-    gap: 20px;
-    padding: 9px 14px;
+    gap: 0;
+
+    padding: 12px 18px;
+
     background: #267a2e;
     color: #ffffff;
-    font-size: 0.78rem;
-    line-height: 1;
-    box-shadow: none;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
     z-index: 20;
   }
 
+  .hero-contact-item,
   .hero-contact-item:first-child {
-    display: none;
-  }
-
-  .hero-contact-item {
-    display: inline-flex;
+    display: flex;
+    width: 100%;
+    min-width: 0;
     align-items: center;
-    gap: 6px;
+    gap: 12px;
+    padding: 8px 0;
     color: #ffffff;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
     text-decoration: none;
   }
+
+  .hero-contact-item:first-child {
+    padding-top: 0;
+  }
+
+  .hero-contact-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .hero-contact-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+  .hero-contact-item > span[aria-hidden="true"] {
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.16);
+
+    color: #ffffff;
+    font-size: 1.05rem;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .hero-contact-text {
+    display: block;
+    min-width: 0;
+    color: #ffffff;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-contact-item:hover {
+    opacity: 1;
+    transform: none;
+    color: #ffffff;
+  }
+
+  .hero-contact-item:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+
+
+  /* Hintergrundbild */
 
   .hero-background {
     position: relative;
     order: 1;
+
     top: auto;
     right: auto;
     bottom: auto;
     left: auto;
+
     width: 100%;
     height: 105vw;
     min-height: 360px;
     max-height: 560px;
+
     background-image: url("zwergenland-hero-mobile.webp");
     background-size: cover;
     background-position: center 42%;
     background-repeat: no-repeat;
+
     z-index: 1;
   }
 
@@ -907,25 +825,36 @@ section:not(.hero) p {
     right: 0;
     bottom: 0;
     height: 180px;
+
     background: linear-gradient(
       to bottom,
       rgba(248, 248, 245, 0) 0%,
       rgba(248, 248, 245, 0.55) 65%,
       rgba(248, 248, 245, 1) 100%
     );
+
     pointer-events: none;
   }
+
+
+  /* Hero-Text */
 
   .hero-content {
     position: relative;
     order: 2;
+
     width: calc(100% - 28px);
     max-width: 520px;
+
     margin: -55px auto 0;
     padding: 27px 20px 26px;
+
     background: rgba(255, 255, 255, 0.98);
+
     border-radius: 24px 24px 0 0;
+
     box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.08);
+
     text-align: center;
     z-index: 5;
   }
@@ -967,51 +896,100 @@ section:not(.hero) p {
     line-height: 1.5;
   }
 
+
+  /* Hero-Buttons */
+
   .hero-buttons {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
     width: 100%;
+    gap: 10px;
+
     margin: 19px auto 0;
   }
 
   .hero-button {
+    display: inline-flex;
     width: 100%;
-    min-height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 54px;
+    padding: 10px 18px;
+
     border-radius: 14px;
-    font-size: 0.92rem;
-    font-weight: 700;
-    box-shadow: 0 5px 14px rgba(38, 122, 46, 0.18);
+
+    font-size: 0.95rem;
+    line-height: 1.25;
+
+    box-shadow: 0 4px 13px rgba(38, 122, 46, 0.12);
   }
 
   .hero-button-secondary {
-    display: none;
+    display: inline-flex;
+    order: -1;
+
+    color: #ffffff;
+    border-color: #267a2e;
+
+    background: linear-gradient(
+      135deg,
+      #4b9e30,
+      #267a2e
+    );
+
+    box-shadow: 0 6px 16px rgba(38, 122, 46, 0.22);
   }
+
+  .hero-button-primary {
+    display: inline-flex;
+    order: 0;
+
+    color: #267a2e;
+    border-color: rgba(38, 122, 46, 0.35);
+    background: #ffffff;
+
+    box-shadow: 0 3px 10px rgba(38, 122, 46, 0.08);
+  }
+
+  .hero-button:hover {
+    transform: none;
+  }
+
+
+  /* Merkmalsleiste */
 
   .hero-features {
     position: relative;
     order: 3;
+
     width: 100%;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+
     padding: 4px 14px 25px;
+
     background: #f8f8f5;
     z-index: 4;
   }
 
   .hero-feature {
     min-height: 70px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     padding: 11px 7px;
+
     border: 1px solid rgba(0, 0, 0, 0.045);
     border-radius: 16px;
+
     background: #ffffff;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.045);
+
     color: #4a4a4a;
     font-size: 0.78rem;
     line-height: 1.25;
@@ -1030,12 +1008,13 @@ section:not(.hero) p {
     color: #d56b72;
     font-size: 1.25rem;
   }
+
 }
 
 
 /* =========================================================
    KLEINE SMARTPHONES
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 480px) {
 
@@ -1053,7 +1032,7 @@ section:not(.hero) p {
   }
 
   .content {
-    margin-top: 135px;
+    margin-top: 104px;
   }
 
   section:not(.hero) {
@@ -1066,11 +1045,6 @@ section:not(.hero) p {
 
   section:not(.hero) p {
     font-size: 15px;
-  }
-
-  .hero-contact {
-    gap: 14px;
-    font-size: 0.72rem;
   }
 
   .hero-background {
@@ -1102,12 +1076,13 @@ section:not(.hero) p {
     min-height: 66px;
     font-size: 0.75rem;
   }
+
 }
 
 
 /* =========================================================
    SEHR KLEINE SMARTPHONES
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 360px) {
 
@@ -1126,12 +1101,13 @@ section:not(.hero) p {
   .hero-feature {
     min-height: 85px;
   }
+
 }
+
 
 /* =========================================================
    REDUZIERTE BEWEGUNGEN
-   Barrierefreiheit
-   ========================================================= */
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -1139,12 +1115,10 @@ section:not(.hero) p {
     scroll-behavior: auto;
   }
 
-
   .sidebar nav a,
   .hero-button {
     transition: none;
   }
-
 
   .hero-button:hover,
   .sidebar nav a:hover {
@@ -1153,12 +1127,13 @@ section:not(.hero) p {
 
 }
 
+
 /* =========================================================
    FEINSCHLIFF – DESKTOP-HERO
-   Kompaktere Abstände zwischen den Textblöcken
-   ========================================================= */
+========================================================= */
 
 @media (min-width: 769px) {
+
   .hero-content {
     padding-top: 82px;
   }
@@ -1178,102 +1153,16 @@ section:not(.hero) p {
   .hero-description {
     margin-bottom: 21px;
   }
-}
 
-
-/* =========================================================
-   MOBILE-KONTAKT – KEINE KOPFLEISTE MEHR
-   Die Kontaktdaten stehen als gut lesbarer Block
-   unterhalb der Hero-Merkmale.
-   ========================================================= */
-
-@media (max-width: 768px) {
-  .hero-contact {
-    position: relative;
-    inset: auto;
-    order: 4;
-    width: calc(100% - 28px);
-    min-height: 0;
-    margin: 0 auto 22px;
-    padding: 15px 17px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 12px;
-    background: #ffffff;
-    color: #245d2b;
-    border: 1px solid rgba(38, 122, 46, 0.14);
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.055);
-    font-size: 0.88rem;
-    font-weight: 600;
-    line-height: 1.4;
-    text-align: left;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    z-index: 5;
-  }
-
-  .hero-contact-item,
-  .hero-contact-item:first-child {
-    display: flex;
-    width: 100%;
-    min-width: 0;
-    align-items: flex-start;
-    gap: 11px;
-    color: #245d2b;
-    white-space: normal;
-    overflow-wrap: anywhere;
-    text-decoration: none;
-  }
-
-  .hero-contact-item span {
-    flex: 0 0 20px;
-    width: 20px;
-    color: #267a2e;
-    font-size: 1.05rem;
-    line-height: 1.3;
-    text-align: center;
-  }
-
-  .hero-contact-item:hover {
-    opacity: 1;
-    transform: none;
-    text-decoration: underline;
-  }
-
-  .hero-contact-item:focus-visible {
-    outline: 2px solid #267a2e;
-    outline-offset: 3px;
-    border-radius: 4px;
-  }
-
-  .hero-features {
-    order: 3;
-  }
-}
-
-
-/* =========================================================
-   SEHR KLEINE SMARTPHONES – KONTAKTBLOCK
-   ========================================================= */
-
-@media (max-width: 360px) {
-  .hero-contact {
-    width: calc(100% - 24px);
-    padding: 13px 14px;
-    font-size: 0.82rem;
-  }
 }
 
 
 /* =========================================================
    KAPITELABSTÄNDE – LAPTOP / DESKTOP
-   Kapitelhöhe folgt dem Inhalt statt einer ganzen Bildschirmhöhe
 ========================================================= */
 
 @media (min-width: 769px) {
+
   section:not(.hero) {
     min-height: auto;
     padding: 48px 70px;
@@ -1287,164 +1176,5 @@ section:not(.hero) p {
   section:not(.hero) p {
     line-height: 1.65;
   }
-}
 
-
-/* =========================================================
-   MOBILE-FEINSCHLIFF – KONTAKTKARTE UND CTA-BUTTON
-   Modernere Kontaktkarte und sichtbarer
-   Button „Kitaplatz anfragen“ auf Smartphones.
-   Desktop-Regeln bleiben unverändert.
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  /* Kontaktkarte unterhalb der Merkmalsleiste */
-  .hero-contact {
-    order: 4;
-    width: calc(100% - 32px);
-    max-width: 520px;
-    margin: 4px auto 26px;
-    padding: 18px 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    background: #ffffff;
-    border: 1px solid rgba(38, 122, 46, 0.12);
-    border-radius: 18px;
-    box-shadow: 0 8px 24px rgba(34, 72, 38, 0.09);
-    color: #315b36;
-    font-size: 0.9rem;
-    font-weight: 600;
-    line-height: 1.45;
-    text-align: left;
-  }
-
-  .hero-contact-item,
-  .hero-contact-item:first-child {
-    display: flex;
-    width: 100%;
-    min-width: 0;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 0;
-    color: #315b36;
-    white-space: normal;
-    overflow-wrap: anywhere;
-    text-decoration: none;
-  }
-
-  .hero-contact-item:first-child {
-    padding-top: 0;
-  }
-
-  .hero-contact-item:last-child {
-    padding-bottom: 0;
-  }
-
-  .hero-contact-item:not(:last-child) {
-    border-bottom: 1px solid #edf2eb;
-  }
-
-  /* Kleine, einheitliche Icon-Flächen links neben den Angaben */
-  .hero-contact-item span {
-    flex: 0 0 36px;
-    width: 36px;
-    height: 36px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 11px;
-    background: #edf6e9;
-    color: #267a2e;
-    font-size: 1.05rem;
-    line-height: 1;
-    text-align: center;
-  }
-
-  .hero-contact-item:hover {
-    opacity: 1;
-    transform: none;
-    color: #176629;
-  }
-
-  .hero-contact-item:focus-visible {
-    outline: 2px solid #267a2e;
-    outline-offset: 3px;
-    border-radius: 8px;
-  }
-
-  /* Beide Hero-Buttons mobil anzeigen */
-  .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    gap: 10px;
-    margin: 19px auto 0;
-  }
-
-  .hero-button {
-    display: inline-flex;
-    width: 100%;
-    min-height: 54px;
-    padding: 10px 18px;
-    border-radius: 14px;
-    font-size: 0.95rem;
-    line-height: 1.25;
-    box-shadow: 0 4px 13px rgba(38, 122, 46, 0.12);
-  }
-
-  /* Haupt-CTA: Kitaplatz anfragen */
-  .hero-button-secondary {
-    display: inline-flex;
-    order: -1;
-    color: #ffffff;
-    border-color: #267a2e;
-    background: linear-gradient(135deg, #4b9e30, #267a2e);
-    box-shadow: 0 6px 16px rgba(38, 122, 46, 0.22);
-  }
-
-  /* Zweiter Button: Kita kennenlernen */
-  .hero-button-primary {
-    display: inline-flex;
-    order: 0;
-    color: #267a2e;
-    border-color: rgba(38, 122, 46, 0.35);
-    background: #ffffff;
-    box-shadow: 0 3px 10px rgba(38, 122, 46, 0.08);
-  }
-
-  .hero-button:hover {
-    transform: none;
-  }
-}
-
-
-/* =========================================================
-   KONTAKTKARTE – SEHR SCHMALE SMARTPHONES
-   ========================================================= */
-
-@media (max-width: 360px) {
-  .hero-contact {
-    width: calc(100% - 24px);
-    padding: 14px 15px;
-    font-size: 0.84rem;
-  }
-
-  .hero-contact-item {
-    gap: 10px;
-  }
-
-  .hero-contact-item span {
-    flex-basis: 33px;
-    width: 33px;
-    height: 33px;
-  }
-
-  .hero-button {
-    min-height: 52px;
-    font-size: 0.9rem;
-  }
 }
