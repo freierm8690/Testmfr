@@ -49,6 +49,7 @@ body {
   flex-direction: column;
 }
 
+
 .sidebar h1 {
   margin-bottom: 40px;
   font-size: 28px;
@@ -66,19 +67,24 @@ body {
   gap: 10px;
 }
 
+
 .sidebar nav a {
   color: white;
   text-decoration: none;
   padding: 12px 15px;
   border-radius: 10px;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
   font-size: 16px;
 }
+
 
 .sidebar nav a:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateX(5px);
 }
+
 
 .sidebar nav a:focus-visible {
   outline: 3px solid #ffffff;
@@ -101,17 +107,18 @@ body {
 ========================================= */
 
 section:not(.hero) {
-  min-height: 100vh;
-  padding: 80px;
+  min-height: auto;
+  padding: 48px 70px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background: #EAF4E5;
   border-bottom: 1px solid #a5d6a7;
 }
 
+
 section:not(.hero) h2 {
-  margin-bottom: 42px;
+  margin-bottom: 24px;
   color: #5ea75e;
   font-size: 34px;
   line-height: 1.2;
@@ -122,10 +129,11 @@ section:not(.hero) h2 {
      1px  1px 0 #fff;
 }
 
+
 section:not(.hero) p {
   max-width: 700px;
   font-size: 18px;
-  line-height: 1.8;
+  line-height: 1.65;
 }
 
 
@@ -188,7 +196,6 @@ section:not(.hero) p {
   left: 0;
   right: 0;
   z-index: 10;
-
   min-height: 46px;
 
   display: flex;
@@ -200,13 +207,13 @@ section:not(.hero) p {
 
   background: rgba(38, 122, 46, 0.92);
   color: #ffffff;
-
   font-size: 0.9rem;
   font-weight: 600;
 
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
+
 
 .hero-contact-item {
   display: inline-flex;
@@ -220,10 +227,12 @@ section:not(.hero) p {
     transform 0.2s ease;
 }
 
+
 .hero-contact-item:hover {
   opacity: 0.85;
   transform: translateY(-1px);
 }
+
 
 .hero-contact-item:focus-visible {
   outline: 2px solid #ffffff;
@@ -265,7 +274,7 @@ section:not(.hero) p {
 
 
 /* =========================================
-   Willkommen im
+   "Willkommen im"
 ========================================= */
 
 .hero-welcome {
@@ -313,6 +322,7 @@ section:not(.hero) p {
   color: #267a2e;
 }
 
+
 .hero-w,
 .hero-n,
 .hero-l,
@@ -320,14 +330,17 @@ section:not(.hero) p {
   color: #3c93c8;
 }
 
+
 .hero-e,
 .hero-a {
   color: #9bb72a;
 }
 
+
 .hero-r {
   color: #f2b51c;
 }
+
 
 .hero-e2 {
   color: #ef7f22;
@@ -383,17 +396,15 @@ section:not(.hero) p {
   gap: 14px;
 }
 
+
 .hero-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   min-height: 54px;
   padding: 0 28px;
-
   border: 2px solid var(--hero-green);
   border-radius: 999px;
-
   font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
@@ -403,6 +414,7 @@ section:not(.hero) p {
     box-shadow 0.2s ease,
     background-color 0.2s ease;
 }
+
 
 .hero-button span {
   margin-right: 10px;
@@ -489,20 +501,17 @@ section:not(.hero) p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   min-height: 100px;
   padding: 0 20px;
-
   color: var(--hero-dark-green);
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.25;
   text-align: center;
 
-  border-right:
-    1px solid
-    rgba(38, 122, 46, 0.22);
+  border-right: 1px solid rgba(38, 122, 46, 0.22);
 }
+
 
 .hero-feature:last-child {
   border-right: 0;
@@ -517,6 +526,7 @@ section:not(.hero) p {
   font-size: 2rem;
   line-height: 1;
 }
+
 
 .hero-heart {
   font-size: 2.7rem;
@@ -534,31 +544,40 @@ section:not(.hero) p {
     padding: 30px 15px;
   }
 
+
   .sidebar h1 {
     font-size: 24px;
   }
+
 
   .sidebar nav a {
     font-size: 14px;
     padding: 10px 12px;
   }
 
+
   .content {
     margin-left: 220px;
     width: calc(100% - 220px);
   }
 
+
   section:not(.hero) {
-    padding: 60px;
+    min-height: auto;
+    padding: 42px 40px;
+    justify-content: flex-start;
   }
+
 
   section:not(.hero) h2 {
     font-size: 34px;
   }
 
+
   .hero {
     min-height: 700px;
   }
+
 
   .hero-content {
     width: 62%;
@@ -570,22 +589,27 @@ section:not(.hero) p {
       6%;
   }
 
+
   .hero-background {
     background-position: 62% center;
   }
+
 
   .hero-sun {
     right: 40px;
   }
 
+
   .hero-title {
     font-size: clamp(3.2rem, 6vw, 5.5rem);
   }
+
 
   .hero-feature {
     padding: 0 12px;
     font-size: 0.9rem;
   }
+
 }
 
 
@@ -599,6 +623,7 @@ section:not(.hero) p {
     flex-direction: column;
   }
 
+
   .sidebar {
     width: 100%;
     height: auto;
@@ -609,11 +634,13 @@ section:not(.hero) p {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
+
   .sidebar h1 {
     margin-bottom: 15px;
     font-size: 24px;
     text-align: center;
   }
+
 
   .sidebar nav {
     flex-direction: row;
@@ -626,9 +653,11 @@ section:not(.hero) p {
     -webkit-overflow-scrolling: touch;
   }
 
+
   .sidebar nav::-webkit-scrollbar {
     display: none;
   }
+
 
   .sidebar nav a {
     flex: 0 0 auto;
@@ -638,9 +667,11 @@ section:not(.hero) p {
     font-size: 14px;
   }
 
+
   .sidebar nav a:hover {
     transform: none;
   }
+
 
   .content {
     width: 100%;
@@ -648,14 +679,17 @@ section:not(.hero) p {
     margin-top: 150px;
   }
 
+
   section:not(.hero) {
     min-height: auto;
     padding: 60px 25px;
   }
 
+
   section:not(.hero) h2 {
     font-size: 30px;
   }
+
 
   section:not(.hero) p {
     font-size: 16px;
@@ -663,9 +697,9 @@ section:not(.hero) p {
   }
 
 
-  /* -----------------------------------------
-     Mobile Hero
-  ----------------------------------------- */
+  /* =====================================================
+     MODERNER MOBILE HERO
+  ===================================================== */
 
   .hero {
     position: relative;
@@ -677,6 +711,7 @@ section:not(.hero) p {
     overflow: hidden;
     background: #f8f8f5;
   }
+
 
   .hero-contact {
     position: relative;
@@ -693,6 +728,7 @@ section:not(.hero) p {
     gap: 20px;
 
     padding: 9px 14px;
+
     background: #267a2e;
     color: #ffffff;
     font-size: 0.78rem;
@@ -701,9 +737,11 @@ section:not(.hero) p {
     z-index: 20;
   }
 
+
   .hero-contact-item:first-child {
     display: none;
   }
+
 
   .hero-contact-item {
     display: inline-flex;
@@ -714,6 +752,7 @@ section:not(.hero) p {
     text-decoration: none;
   }
 
+
   .hero-background {
     position: relative;
     order: 1;
@@ -721,18 +760,17 @@ section:not(.hero) p {
     right: auto;
     bottom: auto;
     left: auto;
-
     width: 100%;
     height: 105vw;
     min-height: 360px;
     max-height: 560px;
-
     background-image: url("zwergenland-hero-mobile.webp");
     background-size: cover;
     background-position: center 42%;
     background-repeat: no-repeat;
     z-index: 1;
   }
+
 
   .hero-background::after {
     content: "";
@@ -752,6 +790,7 @@ section:not(.hero) p {
     pointer-events: none;
   }
 
+
   .hero-content {
     position: relative;
     order: 2;
@@ -759,18 +798,18 @@ section:not(.hero) p {
     max-width: 520px;
     margin: -55px auto 0;
     padding: 27px 20px 26px;
-
     background: rgba(255, 255, 255, 0.98);
     border-radius: 24px 24px 0 0;
-
     box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.08);
     text-align: center;
     z-index: 5;
   }
 
+
   .hero-sun {
     display: none;
   }
+
 
   .hero-welcome {
     margin: 0 0 5px;
@@ -781,6 +820,7 @@ section:not(.hero) p {
     text-transform: uppercase;
   }
 
+
   .hero-title {
     margin: 0;
     font-size: clamp(2.7rem, 12vw, 4rem);
@@ -788,6 +828,7 @@ section:not(.hero) p {
     letter-spacing: -0.055em;
     white-space: nowrap;
   }
+
 
   .hero-claim {
     margin: 13px 0 0;
@@ -797,6 +838,7 @@ section:not(.hero) p {
     font-weight: 700;
   }
 
+
   .hero-description {
     margin: 9px auto 0;
     max-width: 330px;
@@ -805,11 +847,13 @@ section:not(.hero) p {
     line-height: 1.5;
   }
 
+
   .hero-buttons {
     display: block;
     width: 100%;
     margin: 19px auto 0;
   }
+
 
   .hero-button {
     width: 100%;
@@ -823,9 +867,11 @@ section:not(.hero) p {
     box-shadow: 0 5px 14px rgba(38, 122, 46, 0.18);
   }
 
+
   .hero-button-secondary {
     display: none;
   }
+
 
   .hero-features {
     position: relative;
@@ -838,6 +884,7 @@ section:not(.hero) p {
     background: #f8f8f5;
     z-index: 4;
   }
+
 
   .hero-feature {
     min-height: 70px;
@@ -856,6 +903,7 @@ section:not(.hero) p {
     text-align: center;
   }
 
+
   .hero-feature-icon {
     min-height: 0;
     margin: 0 0 5px;
@@ -863,6 +911,7 @@ section:not(.hero) p {
     font-size: 1.15rem;
     line-height: 1;
   }
+
 
   .hero-heart {
     color: #d56b72;
@@ -881,41 +930,50 @@ section:not(.hero) p {
     padding: 12px;
   }
 
+
   .sidebar h1 {
     font-size: 20px;
   }
+
 
   .sidebar nav a {
     padding: 8px 12px;
     font-size: 13px;
   }
 
+
   .content {
     margin-top: 135px;
   }
+
 
   section:not(.hero) {
     padding: 50px 20px;
   }
 
+
   section:not(.hero) h2 {
     font-size: 26px;
   }
 
+
   section:not(.hero) p {
     font-size: 15px;
   }
+
 
   .hero-contact {
     gap: 14px;
     font-size: 0.72rem;
   }
 
+
   .hero-background {
     height: 108vw;
     min-height: 330px;
     background-position: center 40%;
   }
+
 
   .hero-content {
     width: calc(100% - 22px);
@@ -924,17 +982,21 @@ section:not(.hero) p {
     border-radius: 22px 22px 0 0;
   }
 
+
   .hero-title {
     font-size: clamp(2.45rem, 12vw, 3.2rem);
   }
+
 
   .hero-claim {
     font-size: 1rem;
   }
 
+
   .hero-description {
     font-size: 0.84rem;
   }
+
 
   .hero-feature {
     min-height: 66px;
@@ -953,13 +1015,16 @@ section:not(.hero) p {
     height: 360px;
   }
 
+
   .hero-title {
     font-size: 2.7rem;
   }
 
+
   .hero-features {
     grid-template-columns: 1fr;
   }
+
 
   .hero-feature {
     min-height: 85px;
@@ -978,64 +1043,58 @@ section:not(.hero) p {
     scroll-behavior: auto;
   }
 
+
   .sidebar nav a,
   .hero-button {
     transition: none;
   }
 
+
   .hero-button:hover,
   .sidebar nav a:hover {
     transform: none;
   }
+
 }
 
 
 /* =========================================================
-   LAPTOP / DESKTOP – DEUTLICH KOMPAKTERER HERO
-   Reduzierte Abstände zwischen allen Textblöcken
+   FEINSCHLIFF – DESKTOP-HERO
+   Kompaktere Abstände zwischen den Textblöcken
 ========================================================= */
 
 @media (min-width: 769px) {
 
   .hero-content {
-    padding-top: 76px;
-    padding-bottom: 155px;
+    padding-top: 82px;
   }
+
 
   .hero-welcome {
-    margin-top: 0;
-    margin-bottom: 2px;
-    line-height: 1;
+    margin-bottom: 4px;
   }
+
 
   .hero-title {
-    margin-top: 0;
-    margin-bottom: 7px;
-    line-height: 0.9;
+    margin-bottom: 13px;
   }
+
 
   .hero-claim {
-    margin-top: 0;
-    margin-bottom: 8px;
-    line-height: 1.08;
+    margin-bottom: 14px;
   }
+
 
   .hero-description {
-    margin-top: 0;
-    margin-bottom: 14px;
-    line-height: 1.4;
-  }
-
-  .hero-buttons {
-    margin-top: 0;
-    gap: 10px;
+    margin-bottom: 21px;
   }
 }
 
 
 /* =========================================================
-   MOBILE-KONTAKT – GUT LESBARER KONTAKTBLOCK
-   Kontaktdaten unterhalb der Hero-Merkmale
+   MOBILE-KONTAKT – KEINE KOPFLEISTE MEHR
+   Die Kontaktdaten stehen als gut lesbarer Block
+   unterhalb der Hero-Merkmale.
 ========================================================= */
 
 @media (max-width: 768px) {
@@ -1044,7 +1103,6 @@ section:not(.hero) p {
     position: relative;
     inset: auto;
     order: 4;
-
     width: calc(100% - 28px);
     min-height: 0;
     margin: 0 auto 22px;
@@ -1058,10 +1116,8 @@ section:not(.hero) p {
 
     background: #ffffff;
     color: #245d2b;
-
     border: 1px solid rgba(38, 122, 46, 0.14);
     border-radius: 16px;
-
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.055);
 
     font-size: 0.88rem;
@@ -1071,9 +1127,9 @@ section:not(.hero) p {
 
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-
     z-index: 5;
   }
+
 
   .hero-contact-item,
   .hero-contact-item:first-child {
@@ -1082,12 +1138,12 @@ section:not(.hero) p {
     min-width: 0;
     align-items: flex-start;
     gap: 11px;
-
     color: #245d2b;
     white-space: normal;
     overflow-wrap: anywhere;
     text-decoration: none;
   }
+
 
   .hero-contact-item span {
     flex: 0 0 20px;
@@ -1098,17 +1154,20 @@ section:not(.hero) p {
     text-align: center;
   }
 
+
   .hero-contact-item:hover {
     opacity: 1;
     transform: none;
     text-decoration: underline;
   }
 
+
   .hero-contact-item:focus-visible {
     outline: 2px solid #267a2e;
     outline-offset: 3px;
     border-radius: 4px;
   }
+
 
   .hero-features {
     order: 3;
@@ -1126,5 +1185,30 @@ section:not(.hero) p {
     width: calc(100% - 24px);
     padding: 13px 14px;
     font-size: 0.82rem;
+  }
+}
+
+
+/* =========================================================
+   KAPITELABSTÄNDE – LAPTOP / DESKTOP
+   Kapitelhöhe folgt dem Inhalt statt einer ganzen Bildschirmhöhe
+========================================================= */
+
+@media (min-width: 769px) {
+
+  section:not(.hero) {
+    min-height: auto;
+    padding: 48px 70px;
+    justify-content: flex-start;
+  }
+
+
+  section:not(.hero) h2 {
+    margin-bottom: 24px;
+  }
+
+
+  section:not(.hero) p {
+    line-height: 1.65;
   }
 }
