@@ -38,25 +38,16 @@ body {
 .sidebar {
   width: 260px;
   height: 100vh;
-
-  background: linear-gradient(
-    180deg,
-    #7bc67b,
-    #5ea75e
-  );
-
+  background: linear-gradient(180deg, #7bc67b, #5ea75e);
   color: white;
   padding: 40px 20px;
-
   position: fixed;
   left: 0;
   top: 0;
   z-index: 1000;
-
   display: flex;
   flex-direction: column;
 }
-
 
 .sidebar h1 {
   margin-bottom: 40px;
@@ -75,26 +66,19 @@ body {
   gap: 10px;
 }
 
-
 .sidebar nav a {
   color: white;
   text-decoration: none;
   padding: 12px 15px;
   border-radius: 10px;
-
-  transition:
-    background 0.3s ease,
-    transform 0.3s ease;
-
+  transition: background 0.3s ease, transform 0.3s ease;
   font-size: 16px;
 }
-
 
 .sidebar nav a:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateX(5px);
 }
-
 
 .sidebar nav a:focus-visible {
   outline: 3px solid #ffffff;
@@ -119,29 +103,24 @@ body {
 section:not(.hero) {
   min-height: 100vh;
   padding: 80px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   background: #EAF4E5;
   border-bottom: 1px solid #a5d6a7;
 }
-
 
 section:not(.hero) h2 {
   margin-bottom: 42px;
   color: #5ea75e;
   font-size: 34px;
   line-height: 1.2;
-
   text-shadow:
     -1px -1px 0 #fff,
      1px -1px 0 #fff,
     -1px  1px 0 #fff,
      1px  1px 0 #fff;
 }
-
 
 section:not(.hero) p {
   max-width: 700px;
@@ -229,12 +208,10 @@ section:not(.hero) p {
   -webkit-backdrop-filter: blur(5px);
 }
 
-
 .hero-contact-item {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-
   color: #ffffff;
   text-decoration: none;
 
@@ -243,12 +220,10 @@ section:not(.hero) p {
     transform 0.2s ease;
 }
 
-
 .hero-contact-item:hover {
   opacity: 0.85;
   transform: translateY(-1px);
 }
-
 
 .hero-contact-item:focus-visible {
   outline: 2px solid #ffffff;
@@ -264,7 +239,6 @@ section:not(.hero) p {
 .hero-content {
   position: relative;
   z-index: 2;
-
   width: 65%;
   max-width: 720px;
 
@@ -284,7 +258,6 @@ section:not(.hero) p {
   position: absolute;
   top: 58px;
   right: 80px;
-
   color: var(--hero-yellow);
   font-size: 42px;
   line-height: 1;
@@ -328,7 +301,6 @@ section:not(.hero) p {
   font-weight: 800;
   line-height: 0.95;
   letter-spacing: -0.055em;
-
   text-shadow: none;
 }
 
@@ -341,7 +313,6 @@ section:not(.hero) p {
   color: #267a2e;
 }
 
-
 .hero-w,
 .hero-n,
 .hero-l,
@@ -349,17 +320,14 @@ section:not(.hero) p {
   color: #3c93c8;
 }
 
-
 .hero-e,
 .hero-a {
   color: #9bb72a;
 }
 
-
 .hero-r {
   color: #f2b51c;
 }
-
 
 .hero-e2 {
   color: #ef7f22;
@@ -373,7 +341,6 @@ section:not(.hero) p {
 .hero-claim {
   margin: 0 0 24px;
   max-width: 600px;
-
   color: var(--hero-blue);
 
   font-size: clamp(
@@ -394,7 +361,6 @@ section:not(.hero) p {
 .hero-description {
   margin: 0 0 30px;
   max-width: 600px;
-
   color: #174f80;
 
   font-size: clamp(
@@ -417,7 +383,6 @@ section:not(.hero) p {
   gap: 14px;
 }
 
-
 .hero-button {
   display: inline-flex;
   align-items: center;
@@ -439,7 +404,6 @@ section:not(.hero) p {
     background-color 0.2s ease;
 }
 
-
 .hero-button span {
   margin-right: 10px;
   font-size: 1.35rem;
@@ -451,11 +415,12 @@ section:not(.hero) p {
 .hero-button-primary {
   color: #ffffff;
 
-  background: linear-gradient(
-    135deg,
-    #4b9e30,
-    #267a2e
-  );
+  background:
+    linear-gradient(
+      135deg,
+      #4b9e30,
+      #267a2e
+    );
 }
 
 
@@ -517,6 +482,8 @@ section:not(.hero) p {
 }
 
 
+/* Einzelnes Merkmal */
+
 .hero-feature {
   display: flex;
   flex-direction: column;
@@ -532,9 +499,10 @@ section:not(.hero) p {
   line-height: 1.25;
   text-align: center;
 
-  border-right: 1px solid rgba(38, 122, 46, 0.22);
+  border-right:
+    1px solid
+    rgba(38, 122, 46, 0.22);
 }
-
 
 .hero-feature:last-child {
   border-right: 0;
@@ -549,7 +517,6 @@ section:not(.hero) p {
   font-size: 2rem;
   line-height: 1;
 }
-
 
 .hero-heart {
   font-size: 2.7rem;
@@ -567,38 +534,31 @@ section:not(.hero) p {
     padding: 30px 15px;
   }
 
-
   .sidebar h1 {
     font-size: 24px;
   }
-
 
   .sidebar nav a {
     font-size: 14px;
     padding: 10px 12px;
   }
 
-
   .content {
     margin-left: 220px;
     width: calc(100% - 220px);
   }
 
-
   section:not(.hero) {
     padding: 60px;
   }
-
 
   section:not(.hero) h2 {
     font-size: 34px;
   }
 
-
   .hero {
     min-height: 700px;
   }
-
 
   .hero-content {
     width: 62%;
@@ -610,31 +570,22 @@ section:not(.hero) p {
       6%;
   }
 
-
   .hero-background {
     background-position: 62% center;
   }
-
 
   .hero-sun {
     right: 40px;
   }
 
-
   .hero-title {
-    font-size: clamp(
-      3.2rem,
-      6vw,
-      5.5rem
-    );
+    font-size: clamp(3.2rem, 6vw, 5.5rem);
   }
-
 
   .hero-feature {
     padding: 0 12px;
     font-size: 0.9rem;
   }
-
 }
 
 
@@ -648,27 +599,21 @@ section:not(.hero) p {
     flex-direction: column;
   }
 
-
   .sidebar {
     width: 100%;
     height: auto;
-
     position: fixed;
     top: 0;
     left: 0;
-
     padding: 15px;
-
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
-
 
   .sidebar h1 {
     margin-bottom: 15px;
     font-size: 24px;
     text-align: center;
   }
-
 
   .sidebar nav {
     flex-direction: row;
@@ -677,16 +622,13 @@ section:not(.hero) p {
     white-space: nowrap;
     gap: 10px;
     padding-bottom: 5px;
-
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }
 
-
   .sidebar nav::-webkit-scrollbar {
     display: none;
   }
-
 
   .sidebar nav a {
     flex: 0 0 auto;
@@ -696,11 +638,9 @@ section:not(.hero) p {
     font-size: 14px;
   }
 
-
   .sidebar nav a:hover {
     transform: none;
   }
-
 
   .content {
     width: 100%;
@@ -708,17 +648,14 @@ section:not(.hero) p {
     margin-top: 150px;
   }
 
-
   section:not(.hero) {
     min-height: auto;
     padding: 60px 25px;
   }
 
-
   section:not(.hero) h2 {
     font-size: 30px;
   }
-
 
   section:not(.hero) p {
     font-size: 16px;
@@ -726,30 +663,26 @@ section:not(.hero) p {
   }
 
 
-  /* =========================================
-     MODERNER MOBILE HERO
-  ========================================= */
+  /* -----------------------------------------
+     Mobile Hero
+  ----------------------------------------- */
 
   .hero {
     position: relative;
     width: 100%;
     min-height: 0;
     height: auto;
-
     display: flex;
     flex-direction: column;
-
     overflow: hidden;
     background: #f8f8f5;
   }
-
 
   .hero-contact {
     position: relative;
     top: auto;
     left: auto;
     right: auto;
-
     order: 0;
     width: 100%;
     min-height: 42px;
@@ -760,38 +693,30 @@ section:not(.hero) p {
     gap: 20px;
 
     padding: 9px 14px;
-
     background: #267a2e;
     color: #ffffff;
-
     font-size: 0.78rem;
     line-height: 1;
-
     box-shadow: none;
     z-index: 20;
   }
-
 
   .hero-contact-item:first-child {
     display: none;
   }
 
-
   .hero-contact-item {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-
     color: #ffffff;
     white-space: nowrap;
     text-decoration: none;
   }
 
-
   .hero-background {
     position: relative;
     order: 1;
-
     top: auto;
     right: auto;
     bottom: auto;
@@ -799,7 +724,6 @@ section:not(.hero) p {
 
     width: 100%;
     height: 105vw;
-
     min-height: 360px;
     max-height: 560px;
 
@@ -807,10 +731,8 @@ section:not(.hero) p {
     background-size: cover;
     background-position: center 42%;
     background-repeat: no-repeat;
-
     z-index: 1;
   }
-
 
   .hero-background::after {
     content: "";
@@ -818,7 +740,6 @@ section:not(.hero) p {
     left: 0;
     right: 0;
     bottom: 0;
-
     height: 180px;
 
     background: linear-gradient(
@@ -831,82 +752,58 @@ section:not(.hero) p {
     pointer-events: none;
   }
 
-
   .hero-content {
     position: relative;
     order: 2;
-
     width: calc(100% - 28px);
     max-width: 520px;
-
     margin: -55px auto 0;
-
     padding: 27px 20px 26px;
 
     background: rgba(255, 255, 255, 0.98);
-
     border-radius: 24px 24px 0 0;
 
     box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.08);
-
     text-align: center;
     z-index: 5;
   }
-
 
   .hero-sun {
     display: none;
   }
 
-
   .hero-welcome {
     margin: 0 0 5px;
-
     color: #267a2e;
-
     font-size: 0.72rem;
     font-weight: 800;
     letter-spacing: 0.16em;
     text-transform: uppercase;
   }
 
-
   .hero-title {
     margin: 0;
-
-    font-size: clamp(
-      2.7rem,
-      12vw,
-      4rem
-    );
-
+    font-size: clamp(2.7rem, 12vw, 4rem);
     line-height: 0.95;
     letter-spacing: -0.055em;
     white-space: nowrap;
   }
 
-
   .hero-claim {
     margin: 13px 0 0;
-
     color: #3e3e3e;
-
     font-size: 1.08rem;
     line-height: 1.35;
     font-weight: 700;
   }
 
-
   .hero-description {
     margin: 9px auto 0;
     max-width: 330px;
-
     color: #707070;
-
     font-size: 0.88rem;
     line-height: 1.5;
   }
-
 
   .hero-buttons {
     display: block;
@@ -914,85 +811,63 @@ section:not(.hero) p {
     margin: 19px auto 0;
   }
 
-
   .hero-button {
     width: 100%;
     min-height: 50px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 14px;
-
     font-size: 0.92rem;
     font-weight: 700;
-
     box-shadow: 0 5px 14px rgba(38, 122, 46, 0.18);
   }
-
 
   .hero-button-secondary {
     display: none;
   }
 
-
   .hero-features {
     position: relative;
     order: 3;
-
     width: 100%;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-
     padding: 4px 14px 25px;
-
     background: #f8f8f5;
     z-index: 4;
   }
 
-
   .hero-feature {
     min-height: 70px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     padding: 11px 7px;
-
     border: 1px solid rgba(0, 0, 0, 0.045);
     border-radius: 16px;
-
     background: #ffffff;
-
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.045);
-
     color: #4a4a4a;
     font-size: 0.78rem;
     line-height: 1.25;
     text-align: center;
   }
 
-
   .hero-feature-icon {
     min-height: 0;
     margin: 0 0 5px;
-
     color: #267a2e;
     font-size: 1.15rem;
     line-height: 1;
   }
 
-
   .hero-heart {
     color: #d56b72;
     font-size: 1.25rem;
   }
-
 }
 
 
@@ -1006,50 +881,41 @@ section:not(.hero) p {
     padding: 12px;
   }
 
-
   .sidebar h1 {
     font-size: 20px;
   }
-
 
   .sidebar nav a {
     padding: 8px 12px;
     font-size: 13px;
   }
 
-
   .content {
     margin-top: 135px;
   }
-
 
   section:not(.hero) {
     padding: 50px 20px;
   }
 
-
   section:not(.hero) h2 {
     font-size: 26px;
   }
 
-
   section:not(.hero) p {
     font-size: 15px;
   }
-
 
   .hero-contact {
     gap: 14px;
     font-size: 0.72rem;
   }
 
-
   .hero-background {
     height: 108vw;
     min-height: 330px;
     background-position: center 40%;
   }
-
 
   .hero-content {
     width: calc(100% - 22px);
@@ -1058,31 +924,22 @@ section:not(.hero) p {
     border-radius: 22px 22px 0 0;
   }
 
-
   .hero-title {
-    font-size: clamp(
-      2.45rem,
-      12vw,
-      3.2rem
-    );
+    font-size: clamp(2.45rem, 12vw, 3.2rem);
   }
-
 
   .hero-claim {
     font-size: 1rem;
   }
 
-
   .hero-description {
     font-size: 0.84rem;
   }
-
 
   .hero-feature {
     min-height: 66px;
     font-size: 0.75rem;
   }
-
 }
 
 
@@ -1096,21 +953,17 @@ section:not(.hero) p {
     height: 360px;
   }
 
-
   .hero-title {
     font-size: 2.7rem;
   }
-
 
   .hero-features {
     grid-template-columns: 1fr;
   }
 
-
   .hero-feature {
     min-height: 85px;
   }
-
 }
 
 
@@ -1125,59 +978,64 @@ section:not(.hero) p {
     scroll-behavior: auto;
   }
 
-
   .sidebar nav a,
   .hero-button {
     transition: none;
   }
 
-
   .hero-button:hover,
   .sidebar nav a:hover {
     transform: none;
   }
-
 }
 
 
 /* =========================================================
-   FEINSCHLIFF – DESKTOP-HERO
-   Kompaktere Abstände zwischen den Textblöcken
+   LAPTOP / DESKTOP – DEUTLICH KOMPAKTERER HERO
+   Reduzierte Abstände zwischen allen Textblöcken
 ========================================================= */
 
 @media (min-width: 769px) {
 
   .hero-content {
-    padding-top: 82px;
+    padding-top: 76px;
+    padding-bottom: 155px;
   }
-
 
   .hero-welcome {
-    margin-bottom: 4px;
+    margin-top: 0;
+    margin-bottom: 2px;
+    line-height: 1;
   }
-
 
   .hero-title {
-    margin-bottom: 13px;
+    margin-top: 0;
+    margin-bottom: 7px;
+    line-height: 0.9;
   }
-
 
   .hero-claim {
-    margin-bottom: 14px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.08;
   }
-
 
   .hero-description {
-    margin-bottom: 21px;
+    margin-top: 0;
+    margin-bottom: 14px;
+    line-height: 1.4;
   }
 
+  .hero-buttons {
+    margin-top: 0;
+    gap: 10px;
+  }
 }
 
 
 /* =========================================================
-   MOBILE-KONTAKT – KEINE KOPFLEISTE MEHR
-   Die Kontaktdaten stehen als gut lesbarer Block
-   unterhalb der Hero-Merkmale.
+   MOBILE-KONTAKT – GUT LESBARER KONTAKTBLOCK
+   Kontaktdaten unterhalb der Hero-Merkmale
 ========================================================= */
 
 @media (max-width: 768px) {
@@ -1185,12 +1043,10 @@ section:not(.hero) p {
   .hero-contact {
     position: relative;
     inset: auto;
-
     order: 4;
 
     width: calc(100% - 28px);
     min-height: 0;
-
     margin: 0 auto 22px;
     padding: 15px 17px;
 
@@ -1198,7 +1054,6 @@ section:not(.hero) p {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-
     gap: 12px;
 
     background: #ffffff;
@@ -1220,36 +1075,28 @@ section:not(.hero) p {
     z-index: 5;
   }
 
-
   .hero-contact-item,
   .hero-contact-item:first-child {
     display: flex;
-
     width: 100%;
     min-width: 0;
-
     align-items: flex-start;
     gap: 11px;
 
     color: #245d2b;
-
     white-space: normal;
     overflow-wrap: anywhere;
     text-decoration: none;
   }
 
-
   .hero-contact-item span {
     flex: 0 0 20px;
     width: 20px;
-
     color: #267a2e;
-
     font-size: 1.05rem;
     line-height: 1.3;
     text-align: center;
   }
-
 
   .hero-contact-item:hover {
     opacity: 1;
@@ -1257,18 +1104,15 @@ section:not(.hero) p {
     text-decoration: underline;
   }
 
-
   .hero-contact-item:focus-visible {
     outline: 2px solid #267a2e;
     outline-offset: 3px;
     border-radius: 4px;
   }
 
-
   .hero-features {
     order: 3;
   }
-
 }
 
 
@@ -1283,5 +1127,4 @@ section:not(.hero) p {
     padding: 13px 14px;
     font-size: 0.82rem;
   }
-
 }
